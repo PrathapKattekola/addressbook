@@ -40,6 +40,12 @@ pipeline {
                sh 'mvn install'
                sleep 2
              }
+		   
+	 stage('Deploying'){
+             steps{
+               echo "This process deploy the code in local Repository"
+               sh 'mvn install'
+               sleep 2
           }
       }
 }
