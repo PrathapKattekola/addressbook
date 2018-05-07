@@ -46,7 +46,9 @@ pipeline {
 	 stage('Own-test'){
              steps{
                echo "This process deploy the code in local Repository"
-               sh 'echo $dtr'
+	//	sh 'docker run -v $(pwd):$(pwd) -w $(pwd) ${params.DOCKER_REGISTRY_URL}/ascena/busybox rm -rf *')
+                sh 'docker run --rm -v 800:80 $image'
+		     sh 'echo $image'
                
           }
 	 }   }
