@@ -48,7 +48,7 @@ pipeline {
                echo "This process deploy the code in local Repository"
 	//	sh 'docker run -v $(pwd):$(pwd) -w $(pwd) ${params.DOCKER_REGISTRY_URL}/ascena/busybox rm -rf *')
 		     sh 'whoami'
-                sh 'docker run --rm -v 800:80 sh '$image''
+                sh 'docker run --rm -v 800:80' sh '$image'
 		     sh 'echo $image'
                
           }
