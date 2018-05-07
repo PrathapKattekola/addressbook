@@ -43,7 +43,7 @@ pipeline {
 		   
 	   }
 		   
-	 stage('Deploying'){
+	 stage('Own-test'){
              steps{
                echo "This process deploy the code in local Repository"
                sh 'mvn install'
