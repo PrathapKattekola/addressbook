@@ -16,20 +16,20 @@ pipeline {
           stage('testing the code'){
             steps {
   		echo "This stage is concerned on code analysis"
-		sh 'mvn test'
+		//sh 'mvn test'
             }
           }
           stage('Packaging of code'){
              steps { 
                echo " This stage makes the war file"
                
-               sh 'mvn package'
+              // sh 'mvn package'
              }
           }
           stage('Archive Artifacts'){
             steps {
               echo "Archeving Artifacts . . . "
-              archiveArtifacts artifacts: '**/target/*.war'
+            //  archiveArtifacts artifacts: '**/target/*.war'
               echo "Well Done - Finished Archeving "
               
             }
@@ -37,7 +37,7 @@ pipeline {
            stage('Deploying'){
              steps{
                echo "This process deploy the code in local Repository"
-               sh 'mvn install'
+             //  sh 'mvn install'
                
              }
 		   
