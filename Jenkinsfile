@@ -22,7 +22,7 @@ pipeline {
           stage('Packaging of code'){
              steps { 
                echo " This stage makes the war file"
-               sleep 5
+               
                sh 'mvn package'
              }
           }
@@ -31,14 +31,14 @@ pipeline {
               echo "Archeving Artifacts . . . "
               archiveArtifacts artifacts: '**/target/*.war'
               echo "Well Done - Finished Archeving "
-              sleep 5
+              
             }
           }        
            stage('Deploying'){
              steps{
                echo "This process deploy the code in local Repository"
                sh 'mvn install'
-               sleep 2
+               
              }
 		   
 	   }
@@ -46,8 +46,8 @@ pipeline {
 	 stage('Own-test'){
              steps{
                echo "This process deploy the code in local Repository"
-               sh 'mvn install'
-               sleep 2
+               sh 'echo $dtr'
+               
           }
 	 }   }
 }
