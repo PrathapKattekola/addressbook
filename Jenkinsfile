@@ -49,5 +49,5 @@ pipeline {
                sh 'mvn install'
                sleep 2
           }
-      }
+	 }   }
 }
