@@ -81,22 +81,11 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
             </plugin>
-        </plugins>
-   
-    
-    </build>
-
-    <build>
-        <finalName>some_name</finalName>
-            <pluginManagement>
-          <plugins>
             <plugin>
                   <artifactId>maven-war-plugin</artifactId>
                   <version>3.2.2</version>
             </plugin>
-          </plugins>
-        </pluginManagement>
-        
-      </build> 
+        </plugins>
+      </build>
     
 </project>
